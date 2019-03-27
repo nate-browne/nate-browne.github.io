@@ -1,6 +1,7 @@
 /* Font imports */
 @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans");
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
+/* @import url('https://fonts.googleapis.com/css?family=Roboto'); */
 
 h2 {
   font-family: 'IBM Plex Mono', monospace;
@@ -37,9 +38,9 @@ body {
 #contact .fp-slide,
 #contact .fp-tableCell,
 
-#portfolio,
-#portfolio .fp-slide,
-#portfolio .fp-tableCell,
+#projects,
+#projects .fp-slide,
+#projects .fp-tableCell,
 
 footer,
 footer .fp-slide,
@@ -57,7 +58,7 @@ h1,h2,h3,h4,h5 {
 /* end all heading */
 
 /* start all section */
-#work, #about, #portfolio, #contact {
+#work, #about, #projects, #contact {
   padding-top: 100px;
   padding-bottom: 120px;
 }
@@ -270,20 +271,20 @@ margin-top: 30px;
 }
 /* end about */
 
-/* start portfolio */
-#portfolio {
+/* start projects */
+#projects {
   background: #1a1a1a;
   text-align: center;
 }
-#portfolio h2 {
+#projects h2 {
   padding-bottom: 30px;
 }
-#portfolio .portfolio-thumb {
+#projects .projects-thumb {
   overflow: hidden;
   position: relative;
   margin-bottom: 30px;
 }
-#portfolio .portfolio-thumb .portfolio-overlay {
+#projects .projects-thumb .projects-overlay {
   background: #D43F52;
   top: 0;
   left: 0;
@@ -296,12 +297,12 @@ margin-top: 30px;
   padding-top: 60px;
   transition: all 0.4s ease-in-out;
 }
-#portfolio .portfolio-thumb:hover .portfolio-overlay {
+#projects .projects-thumb:hover .projects-overlay {
   cursor: pointer;
   opacity: 0.8;
   transform: scale(0.9);
 }
-/* end portfolio */
+/* end projects */
 
 /* start contact */
 

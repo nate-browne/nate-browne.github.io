@@ -29,6 +29,9 @@
   <!-- custom -->
   <link rel="stylesheet" href="style/site_style.css">
 
+  <!-- typewriter effect -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136946569-1"></script>
   <script>
@@ -49,9 +52,18 @@
       <div class="container">
         <div class="row">
           <div class="col-md-2"></div>
-          <div class="col-md-8 wow fadeIn" data-wow-delay="0.6s">
+          <div class="col-md-8 wow fadeIn" data-wow-delay="0.15s">
             <h1>Nate Browne</h1>
-            <h2 class="rotate">COMPUTER SCIENTIST, SOFTWARE ENGINEER, MUSICIAN, CHRISTIAN</h2>
+            <!--string rotation effect.-->
+            <!--<h2 class="rotate">COMPUTER SCIENTIST, SOFTWARE ENGINEER, CHRISTIAN, MUSICIAN, BODYBOARDER</h2>-->
+            <div id="typed-strings"> <!--set up the typewriter effect-->
+              <p>COMPUTER SCIENTIST</p>
+              <p>SOFTWARE ENGINEER</p>
+              <p>CHRISTIAN</p>
+              <p>MUSICIAN</p>
+              <p>BODYBOARDER</p>
+            </div>
+            <h2><span id="typed"></span></h2>
             <a href="#work" class="btn btn-default smoothScroll wow fadeInUp" data-wow-delay="1s">Learn more</a>
           </div>
           <div class="col-md-2"></div>
@@ -77,9 +89,9 @@
               <div class="media-body">
                 <h3 class="media-heading">Programming Language Theory</h3>
                 <p>
-                  I enjoy reading about and learning different programming languages, ranging from ARM to Visual Basic.
-                  My
-                  favorite languages right now are Haskell, Python, and C++, though I do love me some ARM assembly.
+                  I enjoy reading about and learning different programming languages, ranging from assembly to Visual Basic.
+                  My favorite languages right now are Haskell, Python, and C++, though I do love me some ARM assembly.
+                  The photo above showcases some Haskell!
                 </p>
               </div>
             </div>
@@ -108,9 +120,8 @@
               <div class="media-body">
                 <h3 class="media-heading">Software Engineering</h3>
                 <p>
-                  The process of building scalable, wide-scale systems has always fascinated me, and I hope to further
-                  these skills
-                  to be able to make software that impacts people in a positive way.
+                  The process of building scalable, performant systems has always fascinated me, and I hope to further
+                  these skills to be able to make software that impacts people in a positive way.
                 </p>
               </div>
             </div>
@@ -130,17 +141,14 @@
             <h4>A QUICK RUNDOWN</h4>
             <p>
               I'm an undergraduate student at the <a style="text-decoration:none;color:#999" target="_blank"
-                href="https://ucsd.edu">University of California, San Diego</a>
-              pursuing a B.S. in Computer Science and Cognitive Science with an expected graduation date of June 2020.
-              I'm actively interested in pursuing a Master's Degree in Computer Science, specifically in the field of
-              Systems and Security.
+              href="https://ucsd.edu">University of California, San Diego</a> pursuing a B.S. in Computer Science
+              and Cognitive Science with an expected graduation date of June 2020. I'm actively interested in pursuing
+              a Master's Degree in Computer Science, specifically in the field of Systems and Security.
             </p>
             <p>
               I enjoy playing piano, all things Disney/Pixar, attempting to understand research papers, cycling,
-              bodyboarding,
-              reading, watching volleyball, and listening to a bunch of different kinds of music (check out my Spotify
-              for some examples!).
-              My resume/CV can be found <a style="text-decoration:none;color:teal"
+              bodyboarding, reading, watching volleyball, gaming, and listening to a bunch of different kinds of music (check out my Spotify
+              for some examples!). My resume/CV can be found <a style="text-decoration:none;color:teal"
                 href="https://nate-browne.github.io/files/Real_Resume.pdf" target="_blank">here.</a>
             </p>
           </div>
@@ -149,8 +157,7 @@
             <div>
               <p>
                 I will be working at <a style="text-decoration:none;color:teal" href="https://www.surveymonkey.com"
-                  target="_blank">SurveyMonkey</a>
-                in San Mateo on the security team.
+                  target="_blank">SurveyMonkey</a> in San Mateo on the security team.
               </p>
             </div>
             <span>Undergraduate TA<small>2017-present</small></span>
@@ -158,10 +165,8 @@
               <p>I work in the <a style="text-decoration:none;color:teal"
                   href="https://cse.ucsd.edu/undergraduate/undergraduate-tutors" target="_blank">CSE department</a>
                 at UCSD under Rick Ord and Gary Gillespie. The courses I've worked with include CSE 11 (Intro to
-                Computer Science),
-                CSE 12 (Basic Data Structures), CSE 15L (Software Tools), and CSE 30 (Computer Organization and Systems
-                Programming).
-                I've been a head tutor for CSE 15L since Spring 2019.
+                Computer Science), CSE 12 (Basic Data Structures), CSE 15L (Software Tools), and CSE 30
+                (Computer Organization and Systems Programming). I've been a head tutor for CSE 15L since Spring 2019.
               </p>
             </div>
             <span>Software Engineer Intern<small>Summer 2018</small></span>
@@ -170,10 +175,8 @@
                 I worked at <a style="text-decoration:none;color:teal" href="https://www.serivcenow.com"
                   target="_blank">ServiceNow</a>
                 on the core platform development team. I used Java and BASH to write integration tests and performance
-                benchmarking
-                software for a new tool in the platform, as well as spent time fixing reported platform bugs scattered
-                throughout
-                various parts of the codebase.
+                benchmarking software for a new tool in the platform, as well as spent time fixing reported platform
+                bugs scattered throughout various parts of the codebase.
               </p>
             </div>
           </div>
@@ -182,8 +185,8 @@
     </div>
     <!-- end about -->
 
-    <!-- start portfolio -->
-    <div id="portfolio" class="section">
+    <!-- start projects -->
+    <div id="projects" class="section">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -191,58 +194,54 @@
             <h4 class="wow bounce">Click a photo to learn more</h4>
           </div>
           <div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
-            <div class="portfolio-thumb">
+            <div class="projects-thumb">
               <img src="images/autograder.png" class="img-responsive" alt="Autograder">
-              <div class="portfolio-overlay">
+              <div class="projects-overlay">
                 <a target="_blank" href="https://autograder.ucsd.edu" style="text-decoration:none">
                   <h4>Autograder</h4>
                   <h5>I'm a lead/developer on the Autograder team at UCSD, a system used to manage queues and grading
-                    for 3,000+ students.</h5>
+                    for 2,000+ students.</h5>
                 </a>
               </div>
             </div>
           </div>
           <div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
-            <div class="portfolio-thumb">
+            <div class="projects-thumb">
               <img src="images/studuwu.png" class="img-responsive" alt="Studuwu">
-              <div class="portfolio-overlay">
+              <div class="projects-overlay">
                 <a target="_blank" href="https://www.github.com/nate-browne/Studuwu" style="text-decoration:none">
                   <h4>Studuwu</h4>
                   <h5>Studuwu was a group project for CSE 170 (Interaction Design) at UCSD made for Winter 2019.
                     It is a web app designed to help users pace themselves when reading. I was in charge of handling
-                    most
-                    of the backend functionality, including the database, Facebook login integration, and the book add
-                    pages. I also
-                    assisted with the front-end design and with implementing the analytics and A/B tests.
+                    most of the backend functionality, including the database, Facebook login integration, and the book add
+                    pages. I also assisted with the front-end design and with implementing the analytics and A/B tests.
                   </h5>
                 </a>
               </div>
             </div>
           </div>
           <div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
-            <div class="portfolio-thumb">
+            <div class="projects-thumb">
               <img src="images/music and data.png" class="img-responsive" alt="Music and Data">
-              <div class="portfolio-overlay">
+              <div class="projects-overlay">
                 <a target="_blank" href="https://www.github.com/nate-browne/Music-and-data"
                   style="text-decoration:none">
                   <h5>Music and Data was a group project for COGS 108 (Intro to Data Science) at UCSD. I was in charge
-                    with making the Python scripts
-                    used to scrape, download, and clean the data.
+                    with making the Python scripts used to scrape, download, and clean the data.
                   </h5>
                 </a>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-xs-6 wow fadeIn" data-wow-delay="0.6s">
-            <div class="portfolio-thumb">
+            <div class="projects-thumb">
               <img src="images/intervals.png" class="img-responsive" alt="Interval Identifier">
-              <div class="portfolio-overlay">
+              <div class="projects-overlay">
                 <a target="_blank" href="https://www.github.com/nate-browne/Interval-Identifier"
                   style="text-decoration:none">
                   <h4>Interval Identifier</h4>
                   <h5>Interval Identifier is a project that assists musicians by allowing for near instant playing of
-                    any
-                    musical interval in any octave using Java and JFugue.</h5>
+                    any musical interval in any octave using Java and JFugue.</h5>
                 </a>
               </div>
             </div>
@@ -250,7 +249,7 @@
         </div>
       </div>
     </div>
-    <!-- end portfolio -->
+    <!-- end projects -->
 
     <!-- start contact -->
     <div id="contact" class="section">
@@ -261,7 +260,7 @@
               <p class="contact-title">GET IN TOUCH</p>
               <p><i class="fa fa-phone"></i> 949-520-0644</p>
               <p><i class="fa fa-envelope-o"></i><a style="text-decoration:none;color:#999"
-                  href="mailto:natebrowne@outlook.com?Subject=Hello!" target="_blank">natebrowne@outlook.com</a></p>
+                  href="mailto:nbrowne@ucsd.edu?Subject=Hello!" target="_blank">nbrowne [at] ucsd [dot] edu</a></p>
               <p><i class="fa fa-map-marker"></i>La Jolla, CA or Irvine, CA</p>
             </address>
           </div>
@@ -309,6 +308,18 @@
   <script src="js/jquery.simple-text-rotator.js"></script>
   <!-- custom -->
   <script src="js/custom.js"></script>
+
+  <!--Set up the typewriter effect-->
+  <script>
+    // See https://github.com/mattboldt/typed.js/ for a full list of customization options
+    var typed = new Typed("#typed", {
+      stringsElement: '#typed-strings',// ID of element containing strings
+      typeSpeed: 65, // Speed of typing
+      backSpeed: 65, // Speed of backspacing
+      backDelay: 3000, // How much time between finishing typing and starting to backspace (in ms)
+      loop: true, // Loop continuously
+    });
+  </script>
 
   <!-- Google Maps-->
   <script src="js/maps.js"></script>
