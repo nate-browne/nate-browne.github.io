@@ -42,6 +42,10 @@ body {
 #projects .fp-slide,
 #projects .fp-tableCell,
 
+#interests,
+#interests .fp-slide,
+#interests .fp-tabelCell,
+
 footer,
 footer .fp-slide,
 footer .fp-tableCell {
@@ -58,7 +62,7 @@ h1,h2,h3,h4,h5 {
 /* end all heading */
 
 /* start all section */
-#work, #about, #projects, #contact {
+#work, #about, #projects, #contact, #interests {
   padding-top: 100px;
   padding-bottom: 120px;
 }
@@ -130,7 +134,7 @@ h1,h2,h3,h4,h5 {
   z-index: 2;
   display: block;
   opacity: 1;
-  
+
   -webkit-transform: rotateY(180deg) translate3d(0,0,0);
   -moz-transform: rotateY(180deg) translate3d(0,0,0);
   -ms-transform: rotateY(180deg) translate3d(0,0,0);
@@ -171,7 +175,7 @@ h1,h2,h3,h4,h5 {
 }
 /* end simpletextrotator */
 
-/* start home */       
+/* start home */
 #home {
   background: url('../images/shot2.png');
   background-size: cover;
@@ -243,6 +247,39 @@ margin-top: 30px;
 }
 /* end work */
 
+/* start interests */
+#interests {
+  background: #1a1a1a;
+}
+#interests h2 {
+  text-align: center;
+}
+#interests .media {
+  margin-top: 30px;
+}
+#interests .media .fa {
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  color: #d43f52;
+  font-size: 24px;
+  margin-right: 24px;
+  width: 60px;
+  height: 60px;
+  line-height: 55px;
+  text-align: center;
+  vertical-align: middle;
+  transition: all 0.4s ease-in;
+}
+#interests .media .fa:hover {
+  background: #ffffff;
+  cursor: pointer;
+}
+#interests .media .media-heading {
+  font-weight: 600;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
 /* start about */
 #about h4 {
   padding: 15px 0;
@@ -310,7 +347,7 @@ margin-top: 30px;
   padding-bottom: 18px;
   float: left;
 }
-	
+
 #contact .contact-title {
   font-size: 24px;
   font-weight: bold;
