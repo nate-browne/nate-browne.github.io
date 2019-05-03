@@ -249,7 +249,7 @@ margin-top: 30px;
 
 /* start interests */
 #interests {
-  background: #1a1a1a;
+  background: #000000;
 }
 #interests h2 {
   text-align: center;
@@ -343,6 +343,9 @@ margin-top: 30px;
 
 /* start contact */
 
+#contact {
+  background: #000000;
+}
 #contact address {
   padding-bottom: 18px;
   float: left;
